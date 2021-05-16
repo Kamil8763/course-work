@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blanchard</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/simplebar.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/choices.min.css">
+    <link rel="stylesheet" href="./css/justValidateTooltip.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/simplebar.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+</head>
+
+<body>
+    <!--Блок HEADER-->
+    <header class="header">
+        <div class="header__top">
+            <div class="container header__container flex">
+                <button class="header__burger burger">
+          <span class="burger__top"></span>
+          <span class="burger__center"></span>
+          <span class="burger__bottom"></span>
+        </button>
+                <a href="./index.html" class="header__logo logo"><img src="./png/logo-min.png" class="logo__img" alt="Логотип художественной галереи"></a>
+                <nav class="header__menu menu flex">
+                    <ul class="menu__list flex">
+                        <li class="menu__item">
+                            <a href="#about" class="menu__link">О нас</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#gallery" class="menu__link">Галерея</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#catalog" class="menu__link">Каталог</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">События</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Издания</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Проекты</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Контакты</a>
+                        </li>
+                        <li class="menu__button">
+                            <a href="#" class="menu__link--button">Войти</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="header__button text-btn" aria-label="войти в личный кабинет сайта">
+                    <!--text-header-->
+                    Войти
+                </a>
+            </div>
+        </div>
+        <div class="header__bottom bottom-menu">
+            <div class="container header__container flex">
+                <ul class="bottom-menu__list flex topmenu">
+                    <li class="topmenu__item">
+                        <a href="#" class="topmenu__link click1">Реализм<span class="topmenu__item--icon arrow"></span></a>
+                        <ul class="submenu flex list1" data-simplebar="init">
+                            <li class="submenu__item rel-first">
+                                <a href="#" class="submenu__link">Тинторетто</a>
+                            </li>
+                            <li class="submenu__item rel-two">
+                                <a href="#" class="submenu__link">Фридрих</a>
+                            </li>
+                            <li class="submenu__item rel-free">
+                                <a href="#" class="submenu__link">Леонардо</a>
+                            </li>
+                            <li class="submenu__item rel-four">
+                                <a href="#" class="submenu__link">Верроккью</a>
+                            </li>
+                            <li class="submenu__item rel-first">
+                                <a href="#" class="submenu__link">Тинторетто</a>
+                            </li>
+                            <li class="submenu__item rel-two">
+                                <a href="#" class="submenu__link">Фридрих</a>
+                            </li>
+                            <li class="submenu__item rel-free">
+                                <a href="#" class="submenu__link">Леонардо</a>
+                            </li>
+                            <li class="submenu__item rel-four">
+                                <a href="#" class="submenu__link">Верроккью</a>
+                            </li>
+                            <li class="submenu__item rel-free">
+                                <a href="#" class="submenu__link">Леонардо</a>
+                            </li>
+                            <li class="submenu__item rel-four">
+                                <a href="#" class="submenu__link">Верроккью</a>
+                            </li>
+                            <li class="submenu__item rel-first">
+                                <a href="#" class="submenu__link">Тинторетто</a>
+                            </li>
+                            <li class="submenu__item rel-two">
+                                <a href="#" class="submenu__link">Фридрих</a>
+                            </li>
+                            <li class="submenu__item rel-free">
+                                <a href="#" class="submenu__link">Леонардо</a>
+                            </li>
+                            <li class="submenu__item rel-four">
+                                <a href="#" class="submenu__link">Верроккью</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="topmenu__item">
+                        <a href="#" class="topmenu__link click2">Импрессионизм<span class="topmenu__item--icon arrow1"></span></a>
+                        <ul class="submenu flex list2" data-simplebar="init">
+                            <li class="submenu__item imp-first">
+                                <a href="#" class="submenu__link">Импрессионизм</a>
+                            </li>
+                            <li class="submenu__item imp-two">
+                                <a href="#" class="submenu__link">Фридрих</a>
+                            </li>
+                            <li class="submenu__item imp-free">
+                                <a href="#" class="submenu__link">Леонардо</a>
+                            </li>
+                            <li class="submenu__item imp-four">
+                                <a href="#" class="submenu__link">Верроккью</a>
+                            </li>
+                            <li class="submenu__item imp-four">
+                                <a href="#" class="submenu__link">Верроккью</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="topmenu__item ">
+                        <a href="#" class="topmenu__link click3">Постимпрессионизм<span
+                class="topmenu__item--icon arrow2"></span></a>
+                        <ul class="submenu flex list3" data-simplebar="init">
+                            <li class="submenu__item post-first">
+                                <a href="#" class="submenu__link">Постимпрессионизм</a>
+                            </li>
+                            <li class="submenu__item post-two">
+                                <a href="#" class="submenu__link">Фридрих</a>
+                            </li>
+                            <li class="submenu__item post-free">
+                                <a href="#" class="submenu__link">Леонардо</a>
+                            </li>
+                            <li class="submenu__item post-four">
+                                <a href="#" class="submenu__link">Верроккью</a>
+                            </li>
+                            <li class="submenu__item post-free">
+                                <a href="#" class="submenu__link">Леонардо</a>
+                            </li>
+                            <li class="submenu__item post-four">
+                                <a href="#" class="submenu__link">Верроккью</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="topmenu__item ">
+                        <a href="#" class="topmenu__link click4">Авангард<span class="topmenu__item--icon arrow3"></span></a>
+                        <ul class="submenu flex list4" data-simplebar="init">
+                            <li class="submenu__item av-first">
+                                <a href="#" class="submenu__link">Авангард</a>
+                            </li>
+                            <li class="submenu__item av-two">
+                                <a href="#" class="submenu__link">Авангард</a>
+                            </li>
+                            <li class="submenu__item av-four">
+                                <a href="#" class="submenu__link">Футуризм</a>
+                            </li>
+                            <li class="submenu__item av-free">
+                                <a href="#" class="submenu__link">Футуризм</a>
+                            </li>
+                            <li class="submenu__item av-two">
+                                <a href="#" class="submenu__link">Авангард</a>
+                            </li>
+                            <li class="submenu__item av-four">
+                                <a href="#" class="submenu__link">Футуризм</a>
+                            </li>
+                            <li class="submenu__item av-free">
+                                <a href="#" class="submenu__link">Футуризм</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="topmenu__item">
+                        <a href="#" class="topmenu__link click5">Футуризм<span class="topmenu__item--icon arrow4"></span></a>
+                        <ul class="submenu flex list5" data-simplebar="init">
+                            <li class="submenu__item fut-first">
+                                <a href="#" class="submenu__link">Футуризм</a>
+                            </li>
+                            <li class="submenu__item fut-two">
+                                <a href="#" class="submenu__link">Футуризм</a>
+                            </li>
+                            <li class="submenu__item fut-four">
+                                <a href="#" class="submenu__link">Футуризм</a>
+                            </li>
+                            <li class="submenu__item fut-free">
+                                <a href="#" class="submenu__link">Футуризм</a>
+                            </li>
+                            <li class="submenu__item fut-four">
+                                <a href="#" class="submenu__link">Футуризм</a>
+                            </li>
+                            <li class="submenu__item fut-free">
+                                <a href="#" class="submenu__link">Футуризм</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="header__form form flex">
+                    <button type="button" name="send" class="form__btn">
+            <svg class="form__svg " width="23" height="22" viewBox="0 0 23 22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                fill="white" />
+            </svg>
+          </button>
+                    <input type="text" name="name" placeholder="Поиск по сайту" required class="form__input input">
+                    <div class="form__close">
+                        <span class="close--span"></span>
+                        <span class="close--span"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!--block HERO-->
+        <section class="hero">
+            <div class="swiper-container hero__swiper slider">
+                <div class="swiper-wrapper slider__wrapper">
+                    <div class="swiper-slide slider__img1 slider-img animate__animated animate__pulse animate__infinite infinite">
+                    </div>
+                    <div class="swiper-slide slider__img2 slider-img animate__animated animate__pulse animate__infinite infinite">
+                    </div>
+                    <div class="swiper-slide slider__img3 slider-img animate__animated animate__pulse animate__infinite infinite">
+                    </div>
+                </div>
+            </div>
+            <div class="container hero__container">
+                <h2 class="hero__title">
+                    Прикоснитесь <br> к прекрасному
+                </h2>
+                <p class="hero__text">
+                    Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создает предпосылки для новых предложений.
+                </p>
+                <a href="#" class="hero__link" id="heroLink">Подписаться на расcылку</a>
+            </div>
+        </section>
+        <!--block ABOUT-->
+        <section class="about" id="about">
+            <div class="container about__container">
+                <h3 class="about__title title">
+                    О нас
+                </h3>
+                <p class="about__text text">
+                    Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный
+                    прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого
+                    ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения,
+                    а значит, должны быть разоблачены.
+                </p>
+            </div>
+        </section>
+        <!--block Gallery-->
+        <section class="gallery" id="gallery">
+            <div class="container gallery__container">
+                <div class="gallery__left">
+                    <div class="gallery__top">
+                        <h3 class="gallery__title title">
+                            Галерея
+                        </h3>
+                        <p class="gallery__text text">
+                            Фильтровать по:
+                        </p>
+                        <select name="name" id="filter" class="select">
+              <option value="#">Автор</option>
+              <option value="#">Направление</option>
+              <option value="#">Техника</option>
+            </select>
+                    </div>
+                    <div class="gallery__info text">
+                        Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
+                        <a href="#" class="info__link text">авторизуйтесь,</a> либо воспользуйтесь лицензией.
+                    </div>
+                </div>
+                <div class="gallery__right swiper">
+                    <div class="swiper-container swiper__gallery">
+                        <div class="swiper-wrapper wrapper__gallery">
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <img src="./img/gallery1.jpg" class="slide--img" alt="картина которую можно приобрести на нашем сайте">
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/gallery2.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/gallery3.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/gallery4.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/gallery5.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/gallery6.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide2-1.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide2-2.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide2-3.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide2-4.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide2-5.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide2-6.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide3-1.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide3-2.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide3-3.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide3-4.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide3-5.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide3-6.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide4-1.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide4-2.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide4-3.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide4-4.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide4-5.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide4-6.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide5-1.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide5-2.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide5-3.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide5-4.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide5-5.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__block">
+                                    <button class="slide__btn">
+                    <img src="./img/slide5-6.jpg" class="slide--img"
+                      alt="картина которую можно приобрести на нашем сайте">
+                  </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination pagination__new padination__gallery"></div>
+                        <div class="swiper-button-prev prev__new prev__gallery"></div>
+                        <div class="swiper-button-next next__new next__gallery"></div>
+                    </div>
+                </div>
+                <div class="gallery__info-adaptiv text">
+                    Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
+                    <a href="#" class="info__link text">авторизуйтесь,</a> либо воспользуйтесь лицензией.
+                </div>
+            </div>
+        </section>
+        <!--Блок Catalog-->
+
+        <!--Section events-->
+
+        <!--publications-->
+
+        <!--projects-->
+
+        <!--contacts-->
+
+    </main>
+    <!--footer-->
+
+    <script src="./js/inputmask.min.js"></script>
+    <script src="./js/just-validate.min.js"></script>
+    <script src="./js/simplebar.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/choices.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
