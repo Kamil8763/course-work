@@ -57,11 +57,13 @@ const toggleList1 = function() {
     list1.classList.toggle('show');
     span.classList.toggle('arrowOpen');
     document.querySelector('.click1').classList.toggle('topmenu__link--color');
+    setTimeout(function() {
+        document.querySelector('.show').style.opacity = 1;
+    }, 300);
 }
 
 btnClick1.addEventListener('click', function(e) {
     toggleList1();
-
 });
 
 document.addEventListener('click', function(e) {
@@ -72,6 +74,7 @@ document.addEventListener('click', function(e) {
 
     if (!its_list1 && !its_btnList1 && list1_is_active) {
         toggleList1();
+
     }
 });
 /********/
@@ -82,6 +85,9 @@ const toggleList2 = function() {
     list2.classList.toggle('show');
     span1.classList.toggle('arrowOpen');
     document.querySelector('.click2').classList.toggle('topmenu__link--color');
+    setTimeout(function() {
+        document.querySelector('.show').style.opacity = 1;
+    }, 300);
 }
 
 btnClick2.addEventListener('click', function(e) {
@@ -106,6 +112,9 @@ const toggleList3 = function() {
     list3.classList.toggle('show');
     span2.classList.toggle('arrowOpen');
     document.querySelector('.click3').classList.toggle('topmenu__link--color');
+    setTimeout(function() {
+        document.querySelector('.show').style.opacity = 1;
+    }, 300);
 }
 
 btnClick3.addEventListener('click', function(e) {
@@ -130,6 +139,9 @@ const toggleList4 = function() {
     list4.classList.toggle('show');
     span3.classList.toggle('arrowOpen');
     document.querySelector('.click4').classList.toggle('topmenu__link--color');
+    setTimeout(function() {
+        document.querySelector('.show').style.opacity = 1;
+    }, 300);
 }
 
 btnClick4.addEventListener('click', function(e) {
@@ -154,6 +166,9 @@ const toggleList5 = function() {
     list5.classList.toggle('show');
     span4.classList.toggle('arrowOpen');
     document.querySelector('.click5').classList.toggle('topmenu__link--color');
+    setTimeout(function() {
+        document.querySelector('.show').style.opacity = 1;
+    }, 300);
 }
 
 btnClick5.addEventListener('click', function(e) {
@@ -215,6 +230,8 @@ const swiper1 = new Swiper('.swiper__gallery', {
             slidesPerColumn: 2,
             spaceBetween: 50
         },
+
+
 
         740: {
             slidesPerView: 2,
