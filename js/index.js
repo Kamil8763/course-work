@@ -189,7 +189,7 @@ document.addEventListener('click', function(e) {
 /*Swiper для блока Hero***********************************************************************************************************/
 
 const swiper = new Swiper('.hero__swiper', {
-    loop: true,
+    // loop: true,
     spaceBetween: 50,
     height: 100,
     autoplay: {
@@ -209,14 +209,16 @@ const choices = new Choices(element, {
 });
 /*Swiper gallery*/
 const swiper1 = new Swiper('.swiper__gallery', {
-
-    loop: true,
+    //  loop: true,
     spaceBetween: 10,
     height: 367,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
 
     pagination: {
         el: '.pagination__new',
         type: 'fraction',
+
     },
 
     navigation: {
