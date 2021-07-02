@@ -207,12 +207,13 @@ const choices = new Choices(element, {
     silent: false,
     itemSelectText: ' ',
 });
+
 /*Swiper gallery*/
 const swiper1 = new Swiper('.swiper__gallery', {
     //  loop: true,
     spaceBetween: 10,
     height: 367,
-    slidesPerView: 3,
+    slidesPerView: 1,
     slidesPerGroup: 3,
 
     pagination: {
@@ -233,8 +234,6 @@ const swiper1 = new Swiper('.swiper__gallery', {
             spaceBetween: 50
         },
 
-
-
         740: {
             slidesPerView: 2,
             slidesPerColumn: 2,
@@ -251,20 +250,240 @@ const swiper1 = new Swiper('.swiper__gallery', {
 
 /*************************************************************CATALOG***************************************************************************/
 /*Табы*/
+window.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.catalog__btn').forEach(function(tabBtn) {
+        tabBtn.addEventListener('click', function(event) {
+            const path = event.currentTarget.dataset.path;
+            document.querySelectorAll('.tabs').forEach(function(tabContent) {
+                tabContent.classList.remove('tabs-active');
+            })
+            document.querySelectorAll('.tab').forEach(function(tabBtn) {
+                tabBtn.classList.remove('catalog__btn--active');
+            })
+            document.querySelector(`[data-target="${path}"]`).classList.add('tabs-active');
+            document.querySelector(`[data-path="${path}"]`).classList.add('catalog__btn--active');
+        })
+    })
+})
 
 /*переклчение  информации с фото по художнику*/
+window.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.accordion__btn').forEach(function(tabAutor) {
+        tabAutor.addEventListener('click', function(event) {
+            const info = event.currentTarget.dataset.info;
+            document.querySelectorAll('.catalog__picture').forEach(function(tabContent) {
+                tabContent.classList.remove('catalog__picture-active')
+            })
+
+            document.querySelectorAll('.accordion__btn').forEach(function(tabImg) {
+                tabImg.classList.remove('accordion__btn--active');
+            })
+            document.querySelector(`[data-target="${info}"]`).classList.add('catalog__picture-active');
+            document.querySelector(`[data-info="${info}"]`).classList.add('accordion__btn--active');
+        })
+    })
+})
 
 /*accordion*/
 
+let accItem = document.getElementsByClassName('accordion__block');
+let accHD = document.getElementsByClassName('accordion__title');
+for (i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
+}
+
+function toggleItem() {
+    let itemClass = this.parentNode.className;
+    for (i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordion__block close';
+    }
+    if (itemClass == 'accordion__block close') {
+        this.parentNode.className = 'accordion__block open';
+    }
+}
 
 /*************************************************************EVENT*****************************************************************/
 
+const btnEvent = document.querySelector('.event__btn');
+const open = document.querySelector('.none');
+const open1 = document.querySelector('.none1');
+const open2 = document.querySelector('.none2');
+
+const toggleEvent = function() {
+    open.classList.add('event__item-active');
+    open1.classList.add('event__item-active');
+    open2.classList.add('event__item-active-2');
+}
+
+btnEvent.addEventListener('click', function(o) {
+    o.stopPropagation();
+    toggleEvent();
+    btnEvent.classList.add('event__btn--close');
+})
+
+const swiperEvent = new Swiper('.event__swiper', {
+    loop: true,
+    pagination: {
+        el: '.event__pagination',
+        clickable: true,
+    },
+
+});
 /**************************************************************publications****************************************************************/
+
+
+const swiperPublic = new Swiper('.publications__swiper', {
+    loop: true,
+    spaceBetween: 34,
+    slidesPerView: 1,
+    slidesPerGroup: 2,
+
+    pagination: {
+        el: '.pagination__product',
+        type: 'fraction',
+    },
+
+    navigation: {
+        nextEl: '.product__next',
+        prevEl: '.product__prev',
+    },
+
+    breakpoints: {
+
+        1350: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+            slidesPerGroup: 3,
+        },
+
+
+        1025: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+            slidesPerGroup: 2,
+        },
+
+        740: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+            slidesPerGroup: 2,
+        },
+
+    }
+
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('#formtitle').addEventListener('click', function() {
+        document.querySelector('#formcategory').classList.toggle('open')
+    })
+})
 
 /*****************************************************************Projects**********************************************************************/
 /*swiper*/
+const swiperProjects = new Swiper('.swiper__projects', {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 34,
+
+    navigation: {
+        nextEl: '.next__projects',
+        prevEl: '.prev__projects',
+    },
+
+    breakpoints: {
+
+        1350: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+        },
+
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 34,
+        },
+
+        /*    100: {
+                slidesPerView: 1,
+                spaceBetween: 34,
+            },*/
+    }
+});
 
 /*form*/
 
+let selector = document.querySelector("input[type='tel']");
+
+let im = new Inputmask("+7 (999)-999-99-99");
+im.mask(selector);
+
+new JustValidate('.address__form', {
+    rules: {
+        name: {
+            required: true,
+            minLength: 5,
+            maxLength: 30,
+        },
+        tel: {
+            required: true,
+            function(name, value) {
+                const phone = selector.inputmask.unmaskedvalue()
+                console.log(phone)
+                return Number(phone) && phone.length === 10
+            }
+        },
+    },
+});
 
 /*яндекс карта*/
+// Функция ymaps.ready() будет вызвана, когда
+// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+ymaps.ready(init);
+
+function init() {
+    // Создание карты.
+    var myMap = new ymaps.Map("Mymap", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [55.75846306898368, 37.601079499999905],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 15,
+    });
+    var myPlacemark = new ymaps.Placemark([55.75846306898368, 37.601079499999905], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: './img/map.png',
+        iconImageSize: [20, 20],
+        iconImageOffset: [-3, -42]
+    });
+    // Размещение геообъекта на карте.
+    myMap.geoObjects.add(myPlacemark);
+}
+
+
+
+ymaps.ready(init1);
+
+function init1() {
+    // Создание карты.
+    var myMap1 = new ymaps.Map("Mymap1", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [55.75846306898368, 37.601079499999905],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 15,
+    });
+    var myPlacemark1 = new ymaps.Placemark([55.75846306898368, 37.601079499999905], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: './img/map.png',
+        iconImageSize: [20, 20],
+        iconImageOffset: [-3, -42]
+    });
+    // Размещение геообъекта на карте.
+    myMap1.geoObjects.add(myPlacemark1);
+}
