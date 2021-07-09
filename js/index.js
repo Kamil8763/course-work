@@ -1,4 +1,4 @@
-/**********************************************************HEADER*************************************************************************/
+/***************************************************************блок HEADER**********************************************************************/
 /*код для бургер-меню*/
 const btnMenu = document.querySelector('.burger');
 const burgerTop = document.querySelector('.burger__top');
@@ -10,12 +10,11 @@ const toggleMenu = function() {
     burgerTop.classList.toggle('burger__top--open');
     burgerCenter.classList.toggle('burger__center--open');
     burgerBottom.classList.toggle('burger__bottom--open');
-
 }
 btnMenu.addEventListener('click', function(e) {
     e.stopPropagation();
     toggleMenu();
-});
+})
 
 document.addEventListener('click', function(e) {
     const target = e.target;
@@ -25,8 +24,8 @@ document.addEventListener('click', function(e) {
 
     if (!its_menu && !its_btnMenu && menu_is_active) {
         toggleMenu();
-    }
-});
+    };
+})
 
 /*открытие формы поиск*/
 
@@ -64,20 +63,20 @@ const toggleList1 = function() {
 
 btnClick1.addEventListener('click', function(e) {
     toggleList1();
-});
+})
 
 document.addEventListener('click', function(e) {
-    const targetList1 = e.target;
-    const its_list1 = targetList1 == list1 || list1.contains(targetList1);
-    const its_btnList1 = targetList1 == btnClick1;
-    const list1_is_active = list1.classList.contains('show');
+        const targetList1 = e.target;
+        const its_list1 = targetList1 == list1 || list1.contains(targetList1);
+        const its_btnList1 = targetList1 == btnClick1;
+        const list1_is_active = list1.classList.contains('show');
 
-    if (!its_list1 && !its_btnList1 && list1_is_active) {
-        toggleList1();
+        if (!its_list1 && !its_btnList1 && list1_is_active) {
+            toggleList1();
 
-    }
-});
-/********/
+        };
+    })
+    /********/
 const btnClick2 = document.querySelector('.click2');
 const list2 = document.querySelector('.list2');
 const span1 = document.querySelector('.arrow1');
@@ -92,19 +91,19 @@ const toggleList2 = function() {
 
 btnClick2.addEventListener('click', function(e) {
     toggleList2();
-});
+})
 
 document.addEventListener('click', function(e) {
-    const targetList2 = e.target;
-    const its_list2 = targetList2 == list2 || list2.contains(targetList2);
-    const its_btnList2 = targetList2 == btnClick2;
-    const list2_is_active = list2.classList.contains('show');
+        const targetList2 = e.target;
+        const its_list2 = targetList2 == list2 || list2.contains(targetList2);
+        const its_btnList2 = targetList2 == btnClick2;
+        const list2_is_active = list2.classList.contains('show');
 
-    if (!its_list2 && !its_btnList2 && list2_is_active) {
-        toggleList2();
-    }
-});
-/********/
+        if (!its_list2 && !its_btnList2 && list2_is_active) {
+            toggleList2();
+        };
+    })
+    /********/
 const btnClick3 = document.querySelector('.click3');
 const list3 = document.querySelector('.list3');
 const span2 = document.querySelector('.arrow2');
@@ -119,19 +118,19 @@ const toggleList3 = function() {
 
 btnClick3.addEventListener('click', function(e) {
     toggleList3();
-});
+})
 
 document.addEventListener('click', function(e) {
-    const targetList3 = e.target;
-    const its_list3 = targetList3 == list3 || list3.contains(targetList3);
-    const its_btnList3 = targetList3 == btnClick3;
-    const list3_is_active = list3.classList.contains('show');
+        const targetList3 = e.target;
+        const its_list3 = targetList3 == list3 || list3.contains(targetList3);
+        const its_btnList3 = targetList3 == btnClick3;
+        const list3_is_active = list3.classList.contains('show');
 
-    if (!its_list3 && !its_btnList3 && list3_is_active) {
-        toggleList3();
-    }
-});
-/********/
+        if (!its_list3 && !its_btnList3 && list3_is_active) {
+            toggleList3();
+        };
+    })
+    /********/
 const btnClick4 = document.querySelector('.click4');
 const list4 = document.querySelector('.list4');
 const span3 = document.querySelector('.arrow3');
@@ -146,7 +145,7 @@ const toggleList4 = function() {
 
 btnClick4.addEventListener('click', function(e) {
     toggleList4();
-});
+})
 
 document.addEventListener('click', function(e) {
     const targetList4 = e.target;
@@ -156,8 +155,8 @@ document.addEventListener('click', function(e) {
 
     if (!its_list4 && !its_btnList4 && list4_is_active) {
         toggleList4();
-    }
-});
+    };
+})
 
 const btnClick5 = document.querySelector('.click5');
 const list5 = document.querySelector('.list5');
@@ -173,7 +172,7 @@ const toggleList5 = function() {
 
 btnClick5.addEventListener('click', function(e) {
     toggleList5();
-});
+})
 
 document.addEventListener('click', function(e) {
     const targetList5 = e.target;
@@ -183,10 +182,10 @@ document.addEventListener('click', function(e) {
 
     if (!its_list5 && !its_btnList5 && list5_is_active) {
         toggleList5();
-    }
-});
+    };
+})
 
-/*Swiper для блока Hero***********************************************************************************************************/
+/****************************************************************блок Hero***********************************************************************/
 
 const swiper = new Swiper('.hero__swiper', {
     // loop: true,
@@ -196,9 +195,9 @@ const swiper = new Swiper('.hero__swiper', {
         delay: 5000,
         disableOnInteraction: false,
     },
-});
+})
 
-/********************************************************Block Gallery***************************************************************************/
+/********************************************************Блок Gallery****************************************************************************/
 
 /*choices js фильтр**/
 const element = document.querySelector('.select');
@@ -206,20 +205,17 @@ const choices = new Choices(element, {
     searchEnabled: false,
     silent: false,
     itemSelectText: ' ',
-});
+})
 
 /*Swiper gallery*/
 const swiper1 = new Swiper('.swiper__gallery', {
-    //  loop: true,
     spaceBetween: 10,
-    height: 367,
     slidesPerView: 1,
-    slidesPerGroup: 3,
+    slidesPerGroup: 1,
 
     pagination: {
         el: '.pagination__new',
         type: 'fraction',
-
     },
 
     navigation: {
@@ -228,27 +224,37 @@ const swiper1 = new Swiper('.swiper__gallery', {
     },
 
     breakpoints: {
-        1400: {
+        1250: {
             slidesPerView: 3,
             slidesPerColumn: 2,
-            spaceBetween: 50
+            slidesPerGroup: 3,
+            spaceBetween: 50,
         },
 
-        740: {
+        577: {
             slidesPerView: 2,
             slidesPerColumn: 2,
-            spaceBetween: 34
+            slidesPerGroup: 2,
+            spaceBetween: 34,
         },
 
         321: {
-            slidesPerView: 1,
-            slidesPerColumn: 2,
-            spaceBetween: 34
+            slidesPerView: 2,
+            slidesPerColumn: 1,
+            slidesPerGroup: 2,
+            spaceBetween: 34,
         },
-    }
-});
+        320: {
+            slidesPerView: 1,
+            slidesPerColumn: 1,
+            spaceBetween: 34,
+            slidesPerGroup: 1,
+        },
 
-/*************************************************************CATALOG***************************************************************************/
+    },
+})
+
+/*********************************************************Блок CATALOG***************************************************************************/
 /*Табы*/
 window.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.catalog__btn').forEach(function(tabBtn) {
@@ -262,8 +268,8 @@ window.addEventListener('DOMContentLoaded', function() {
             })
             document.querySelector(`[data-target="${path}"]`).classList.add('tabs-active');
             document.querySelector(`[data-path="${path}"]`).classList.add('catalog__btn--active');
-        })
-    })
+        });
+    });
 })
 
 /*переклчение  информации с фото по художнику*/
@@ -280,8 +286,8 @@ window.addEventListener('DOMContentLoaded', function() {
             })
             document.querySelector(`[data-target="${info}"]`).classList.add('catalog__picture-active');
             document.querySelector(`[data-info="${info}"]`).classList.add('accordion__btn--active');
-        })
-    })
+        });
+    });
 })
 
 /*accordion*/
@@ -296,13 +302,14 @@ function toggleItem() {
     let itemClass = this.parentNode.className;
     for (i = 0; i < accItem.length; i++) {
         accItem[i].className = 'accordion__block close';
-    }
+    };
     if (itemClass == 'accordion__block close') {
         this.parentNode.className = 'accordion__block open';
-    }
+    };
 }
 
-/*************************************************************EVENT*****************************************************************/
+
+/*******************************************************************Блок EVENT*******************************************************************/
 
 const btnEvent = document.querySelector('.event__btn');
 const open = document.querySelector('.none');
@@ -323,20 +330,20 @@ btnEvent.addEventListener('click', function(o) {
 
 const swiperEvent = new Swiper('.event__swiper', {
     loop: true,
+
     pagination: {
         el: '.event__pagination',
         clickable: true,
     },
+})
 
-});
-/**************************************************************publications****************************************************************/
-
+/***************************************************************Блок publications****************************************************************/
 
 const swiperPublic = new Swiper('.publications__swiper', {
-    loop: true,
+    loop: false,
     spaceBetween: 34,
     slidesPerView: 1,
-    slidesPerGroup: 2,
+    slidesPerGroup: 1,
 
     pagination: {
         el: '.pagination__product',
@@ -356,30 +363,51 @@ const swiperPublic = new Swiper('.publications__swiper', {
             slidesPerGroup: 3,
         },
 
-
         1025: {
             slidesPerView: 2,
             spaceBetween: 50,
             slidesPerGroup: 2,
         },
 
-        740: {
+        576: {
             slidesPerView: 2,
-            spaceBetween: 50,
+            spaceBetween: 34,
             slidesPerGroup: 2,
         },
 
-    }
+    },
 
-});
+})
 
 window.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#formtitle').addEventListener('click', function() {
         document.querySelector('#formcategory').classList.toggle('open')
-    })
+    });
 })
 
+
 /*****************************************************************Projects**********************************************************************/
+
+/*tooltip*/
+
+tippy('#myTooltip1', {
+    content: 'Пример современных тенденций - современная методология разработки',
+    theme: 'tomato',
+    trigger: 'click'
+})
+
+tippy('#myTooltip2', {
+    content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции',
+    theme: 'tomato',
+    trigger: 'click'
+})
+
+tippy('#myTooltip3', {
+    content: 'В стремлении повысить качество',
+    theme: 'tomato',
+    trigger: 'click'
+})
+
 /*swiper*/
 const swiperProjects = new Swiper('.swiper__projects', {
     loop: false,
@@ -393,7 +421,7 @@ const swiperProjects = new Swiper('.swiper__projects', {
 
     breakpoints: {
 
-        1350: {
+        1025: {
             slidesPerView: 3,
             spaceBetween: 50,
         },
@@ -403,12 +431,10 @@ const swiperProjects = new Swiper('.swiper__projects', {
             spaceBetween: 34,
         },
 
-        /*    100: {
-                slidesPerView: 1,
-                spaceBetween: 34,
-            },*/
-    }
-});
+    },
+})
+
+/**************************************************************************Contacts*************************************************************/
 
 /*form*/
 
@@ -418,10 +444,12 @@ let im = new Inputmask("+7 (999)-999-99-99");
 im.mask(selector);
 
 new JustValidate('.address__form', {
+
     rules: {
+
         name: {
             required: true,
-            minLength: 5,
+            minLength: 3,
             maxLength: 30,
         },
         tel: {
@@ -430,10 +458,18 @@ new JustValidate('.address__form', {
                 const phone = selector.inputmask.unmaskedvalue()
                 console.log(phone)
                 return Number(phone) && phone.length === 10
-            }
+            },
+
         },
     },
-});
+
+    messages: {
+        name: "Недопустимый формат",
+        tel: "Недопустимый формат",
+    },
+})
+
+
 
 /*яндекс карта*/
 // Функция ymaps.ready() будет вызвана, когда
@@ -454,36 +490,10 @@ function init() {
     });
     var myPlacemark = new ymaps.Placemark([55.75846306898368, 37.601079499999905], {}, {
         iconLayout: 'default#image',
-        iconImageHref: './img/map.png',
+        iconImageHref: './png/map.png',
         iconImageSize: [20, 20],
         iconImageOffset: [-3, -42]
     });
     // Размещение геообъекта на карте.
     myMap.geoObjects.add(myPlacemark);
-}
-
-
-
-ymaps.ready(init1);
-
-function init1() {
-    // Создание карты.
-    var myMap1 = new ymaps.Map("Mymap1", {
-        // Координаты центра карты.
-        // Порядок по умолчанию: «широта, долгота».
-        // Чтобы не определять координаты центра карты вручную,
-        // воспользуйтесь инструментом Определение координат.
-        center: [55.75846306898368, 37.601079499999905],
-        // Уровень масштабирования. Допустимые значения:
-        // от 0 (весь мир) до 19.
-        zoom: 15,
-    });
-    var myPlacemark1 = new ymaps.Placemark([55.75846306898368, 37.601079499999905], {}, {
-        iconLayout: 'default#image',
-        iconImageHref: './img/map.png',
-        iconImageSize: [20, 20],
-        iconImageOffset: [-3, -42]
-    });
-    // Размещение геообъекта на карте.
-    myMap1.geoObjects.add(myPlacemark1);
 }
