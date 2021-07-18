@@ -497,3 +497,71 @@ function init() {
     // Размещение геообъекта на карте.
     myMap.geoObjects.add(myPlacemark);
 }
+
+/*Всплывающие картинки блока галерея*/
+
+/*1*/
+const btnPopUp = document.querySelector('.slide__btn-2');
+const PopUp = document.querySelector('.pop-up');
+const PopUpBlockClose = document.querySelector('.pop-up__block-close');
+const RighetClose = document.querySelector('.righet__close');
+
+btnPopUp.onclick = function() {
+    PopUp.classList.add('pop-up__active');
+    PopUpBlockClose.classList.add('pop-up__block');
+}
+
+RighetClose.onclick = function() {
+    PopUp.classList.remove('pop-up__active');
+    PopUpBlockClose.classList.remove('pop-up__block');
+}
+
+/*2*/
+
+const btnPopUp1 = document.querySelector('.slide__btn-1');
+const PopUpBlockClose2 = document.querySelector('.pop-up__block-close-2');
+const RighetClose2 = document.querySelector('.righet__close-2');
+
+btnPopUp1.onclick = function() {
+    PopUp.classList.add('pop-up__active');
+    PopUpBlockClose2.classList.add('pop-up__block');
+}
+
+RighetClose2.onclick = function() {
+    PopUp.classList.remove('pop-up__active');
+    PopUpBlockClose2.classList.remove('pop-up__block');
+}
+
+/*3*/
+
+const btnPopUp3 = document.querySelector('.slide__btn-3');
+const PopUpBlockClose3 = document.querySelector('.pop-up__block-close-3');
+const RighetClose3 = document.querySelector('.righet__close-3');
+
+btnPopUp3.onclick = function() {
+    PopUp.classList.add('pop-up__active');
+    PopUpBlockClose3.classList.add('pop-up__block');
+}
+
+RighetClose3.onclick = function() {
+    PopUp.classList.remove('pop-up__active');
+    PopUpBlockClose3.classList.remove('pop-up__block');
+}
+
+/*4*/
+
+const btnPopUp4 = document.querySelector('.slide__btn-4');
+const PopUpBlockClose4 = document.querySelector('.pop-up__block-close-4');
+const RighetClose4 = document.querySelector('.righet__close-4');
+
+btnPopUp4.onclick = function() {
+    PopUp.classList.add('pop-up__active');
+    PopUpBlockClose4.classList.add('pop-up__block');
+}
+
+RighetClose4.onclick = function() {
+    PopUp.classList.remove('pop-up__active');
+    PopUpBlockClose4.classList.remove('pop-up__block');
+}
+
+/*5*/
